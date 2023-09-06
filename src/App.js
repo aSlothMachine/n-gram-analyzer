@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+// import { useEffect, useState } from 'react';
+import Submit from './Submit';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+
+    return (
+        <div className='app'>
+            <h1>N-Gram Insight Tool</h1>
+            <p className="tool-description">
+                Explore and analyze text data with the n-Gram Insight Tool to discover valuable insights. Upload up to 3 text files and 
+                select an n-gram value. 
+                This tool compares your text files to calculate Jaccard Similarity, and visualize the most common and unique n-grams.
+            </p>
+
+            <Submit />
+
+        </div>
+    );
+};
 
 export default App;

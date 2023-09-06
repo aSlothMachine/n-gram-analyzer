@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root {
+  --font-roboto: "Roboto Slab", serif;
+  --font-raleway: "Raleway", sans-serif;
+
+  --text-primary: #007BFF;
+  --text-secondary: #333333;
+  --text-tertiary: #FE621D;
+  --bg-body: #F5F5F5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+p {
+  padding: 20px;
+  color: var(--text-secondary);
+  font-family: var(--font-roboto);
+}
+
+body {
+  font-family: var(--font-roboto);
+  background-color: var(--bg-body);
+}
+
+.app {
+    padding: 4rem;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 0.9px;
+    color: var(--text-primary);
+    width: fit-content;
+    padding-bottom: 10px;
   }
-  to {
-    transform: rotate(360deg);
+
+  h2 {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    font-family: var(--font-raleway);
+    padding-top: 10px;
   }
+
+/* 
+  .display {
+    width: 310px;
+    height: 460px;
+    margin: 1.5rem;
+  
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+  
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+    box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+  } */
+
+  @media screen and (max-width: 600px) {
+    .app {
+      padding: 4rem 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    .app {
+      padding: 4rem 1rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    .container {
+      margin-top: 2rem;
+    }
+} 
+
+/*  */
+
+.submit {
+  background-color: #f0f0f0; /* Light gray background color */
+  padding: 20px; /* Add padding to create spacing around the content */
+  border: 1px solid #ccc; /* Add a subtle border */
+  border-radius: 5px; /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+}
+
+.submit h2 {
+  font-size: 24px; /* Adjust the font size for the heading */
+  margin-bottom: 10px; /* Add spacing below the heading */
+}
+
+.submit input[type="file"] {
+  margin-top: 10px; /* Add spacing above the file input */
+}
+
+.submit label {
+  font-size: 16px; /* Adjust the font size for the label */
+}
+
+.submit select {
+  font-size: 16px; /* Adjust the font size for the select dropdown */
+  margin-top: 5px; /* Add spacing above the select */
+}
+
+.submit button {
+  background-color: #007BFF; /* Blue button color */
+  color: #fff; /* White text color */
+  border: none; /* Remove the button border */
+  border-radius: 5px; /* Add rounded corners to the button */
+  padding: 10px 20px; /* Add padding to the button */
+  font-size: 1rem; /* Adjust the font size for the button text */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  margin-top: 15px; /* Add margin to push the button down */
+}
+
+.submit button:hover {
+  background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.tool-description {
+  font-size: 1rem; /* Adjust the font size as needed */
+  margin-bottom: 20px; /* Add spacing below the paragraph */
+  max-width: 600px; /* Adjust the maximum width to control the line length */
+  text-align: center; /* Center-align the text */
 }
